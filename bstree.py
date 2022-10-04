@@ -15,7 +15,7 @@ class BSTree(object):
             return
 
         current = self.root
-        
+
         while True:
             if current.data < node.data:
                 if current.right is None:
@@ -27,7 +27,7 @@ class BSTree(object):
                     current.left = node
                     return
                 current = current.left
-    
+
     def search(self, target):
         current = self.root
         while current is not None:
@@ -37,7 +37,7 @@ class BSTree(object):
                 current = current.left
             else:
                 return current
-        
+
         return None
 
 
@@ -54,11 +54,11 @@ def test():
         assert b.search(arr[-1])
         assert not b.search(1.11111)
         print('ok')
-        
+
     # null case
     b = BSTree()
     assert not b.search(1.1111)
     print('ok')
 
-test()
 
+test()

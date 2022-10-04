@@ -13,7 +13,7 @@ def spp(arr, start, end, ipivot) -> (int, int):
         if arr[i] <= arr[start]:
             swap(arr, lo + 1, i)
             lo += 1
-    
+
     swap(arr, start, lo)
 
     return lo

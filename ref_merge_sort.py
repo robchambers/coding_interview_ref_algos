@@ -1,5 +1,6 @@
 """ Merge sort """
 
+
 def merge(arr, start, mid, end):
     """
     [ x x 0 1 2 3 0 1 2 3 x x ]
@@ -19,10 +20,10 @@ def merge(arr, start, mid, end):
             result.append(arr[j])
             j += 1
 
-    result.extend(arr[i : mid + 1])
-    result.extend(arr[j : end + 1])
+    result.extend(arr[i:mid + 1])
+    result.extend(arr[j:end + 1])
 
-    arr[start : end + 1] = result
+    arr[start: end + 1] = result
 
 
 def _merge_sort(arr, start, end):
@@ -30,7 +31,7 @@ def _merge_sort(arr, start, end):
         return
 
     mid = start + (end - start) // 2
-    
+
     _merge_sort(arr, start, mid)
     _merge_sort(arr, mid + 1, end)
 
@@ -68,4 +69,3 @@ def test():
 
 
 test()
-

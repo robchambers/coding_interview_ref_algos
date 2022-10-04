@@ -3,6 +3,7 @@
 import random
 import heapq
 
+
 def heapsort_in_out_w_key(arr, reverse=False):
     h = []
     for el in arr:
@@ -14,6 +15,7 @@ def heapsort_in_out_w_key(arr, reverse=False):
     while len(h):
         out.append(heapq.heappop(h)[1])
     return out
+
 
 def test():
     sort_f = heapsort_in_out_w_key
@@ -56,4 +58,3 @@ def test():
 
 
 test()
-

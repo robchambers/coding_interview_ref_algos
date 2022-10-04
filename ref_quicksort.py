@@ -2,8 +2,10 @@
 
 import random
 
+
 def swap(arr, i, j):
     arr[i], arr[j] = arr[j], arr[i]
+
 
 def dnf(arr, start, end, ipivot) -> (int, int):
     """ 
@@ -13,9 +15,9 @@ def dnf(arr, start, end, ipivot) -> (int, int):
     """
 
     pivot = arr[ipivot]
-    
-    low = start - 1 # last el in left partition
-    mid = start - 1 # last el in mid partitioni
+
+    low = start - 1  # last el in left partition
+    mid = start - 1  # last el in mid partitioni
     high = end + 1  # first el in right parition
 
     while mid + 1 < high:
@@ -25,12 +27,13 @@ def dnf(arr, start, end, ipivot) -> (int, int):
         elif arr[mid + 1] == pivot:
             # swap(mid + 1, mid + 1)# noop
             mid += 1
-        else: # arr[mid + 1] < pivot:
+        else:  # arr[mid + 1] < pivot:
             swap(arr, mid + 1, low + 1)
             low += 1
             mid += 1
-        
+
     return (low, high)
+
 
 def _quicksort(arr, start, end):
     if start >= end:
@@ -70,4 +73,3 @@ def test():
 
 
 test()
-

@@ -11,15 +11,16 @@ def visit(n, **kwargs):
 def pre_o(n, **kwargs):
     if not n:
         return
-    
+
     visit(n, **kwargs)
     pre_o(n.left, **kwargs)
     pre_o(n.right, **kwargs)
 
+
 def in_o(n, **kwargs):
     if not n:
         return
-    
+
     in_o(n.left, **kwargs)
     visit(n, **kwargs)
     in_o(n.right, **kwargs)
@@ -28,10 +29,11 @@ def in_o(n, **kwargs):
 def post_o(n, **kwargs):
     if not n:
         return
-    
+
     post_o(n.left, **kwargs)
     post_o(n.right, **kwargs)
     visit(n, **kwargs)
+
 
 def pre_o_iter(n, **kwargs):
     stack = []
@@ -62,7 +64,7 @@ def in_o_iter(n, **kwargs):
 #                 stack.append(n.right)
 #             stack.append(n)
 #             n = n.left
-        
+
 #         n = stack.pop()
 
 #         if len(stack) and stack[-1] == n.right: # swap when we get back to a root
@@ -82,15 +84,15 @@ def test():
         6          7
     """
     b = Node(1,
-        Node(2),
-        Node(3,
-            Node(4,
-                Node(6),
-                None),
-            Node(5,
-                None,
-                Node(7)))
-    )
+             Node(2),
+             Node(3,
+                  Node(4,
+                       Node(6),
+                       None),
+                  Node(5,
+                       None,
+                       Node(7)))
+             )
     ret = []
     pre_o(b, ret=ret)
     print(ret)
@@ -121,5 +123,5 @@ def test():
     print(ret)
     assert tuple(ret) == (2, 6, 4, 7, 5, 3, 1)
 
-test()
 
+test()

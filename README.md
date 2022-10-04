@@ -13,7 +13,7 @@ Here's the idea:
 Here's how I recommend practicing them:
 * Pick an algorithm (`ref_*.py`). Make sure you understand it via whatever class/bootcamp/book you're using (see below for suggestions).
 * Copy it into practice.py.
-* In practice.py, delete part of all of the code above `def test():`.
+* In practice.py, delete part or all of the code above `def test():`.
 * If you try to run the file now, it will fail, of course.
 * Now, try to re-write the algorithm, exactly, from memory. 
   * If you get stuck, look at the original copy, and read ahead to try to re-memorize it.
