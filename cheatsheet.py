@@ -72,5 +72,17 @@ OOp: ();  **;  +x, -x, ~x;  *, /, //, %;  +, -;  <<, >>;  &; ^; |; comparison;  
      P    P                   M    D      A  S       Binary         Comparison   Logical not-and-or
 Comp: ==, !=, <>, etc.
 Logical: and, or, not  (similar: in, not in)
-Boinary ops: &, |, ^, ~, <<, >>
+Binary ops: &, |, ^, ~, <<, >>
+"""
+
+"""
+string: 
+ sets: .ascii_[letters,lowercase,uppercase], .digits, .punctuation, .whitespace
+ methods: 
+    .capitalize(), .count(sub), .endswith(suffix), .startswith(prefix)
+    .find(sub[, start[, end]]) -> (-1 | int), .index(sub[, start[, end]]) -> (Err | int), 
+    .isalnum(), .isalpha(), .isdigit(), .islower(), 
+    .lower(), .upper()
+    .join(iterable), .split(sep), .splitlines(), 
+    .replace(old, new[, count]), .strip()
 """
