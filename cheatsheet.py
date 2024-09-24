@@ -86,3 +86,12 @@ string:
     .join(iterable), .split(sep), .splitlines(), 
     .replace(old, new[, count]), .strip()
 """
+
+
+"""BFS
+from collections import deque
+# .popleft(), .appendleft(x),  ---   , .append(x), .pop()
+"""
+
+"""Math
+min(a,b,c) ; max(a,b,c)"""
