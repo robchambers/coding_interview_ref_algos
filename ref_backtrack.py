@@ -30,9 +30,9 @@ def permutations(arr, n=None):
             return
 
         for i in range(start, end):
-            arr[i], arr[start] = arr[start], arr[i]
+            arr[start], arr[i] = arr[i], arr[start]
             backtrack(start + 1, end)
-            arr[i], arr[start] = arr[start], arr[i]
+            arr[start], arr[i] = arr[i], arr[start]
 
     ret = []
     backtrack(0, len(arr))

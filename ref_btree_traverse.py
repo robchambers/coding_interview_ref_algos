@@ -5,7 +5,7 @@ from btree import *
 
 def visit(n, **kwargs):
     print(n.data)
-    kwargs['ret'].append(n.data)
+    kwargs["ret"].append(n.data)
 
 
 def pre_o(n, **kwargs):
@@ -37,12 +37,14 @@ def post_o(n, **kwargs):
 
 def pre_o_iter(n, **kwargs):
     stack = []
-    while stack or n:
-        while n:
+    stack.append(n)
+
+    while len(stack):
+        n = stack.pop()
+        if n:
             visit(n, **kwargs)
             stack.append(n.right)
-            n = n.left
-        n = stack.pop()
+            stack.append(n.left)
 
 
 def in_o_iter(n, **kwargs):
@@ -80,19 +82,10 @@ def test():
     """
         1
     2        3
-          4     5  
+          4     5
         6          7
     """
-    b = Node(1,
-             Node(2),
-             Node(3,
-                  Node(4,
-                       Node(6),
-                       None),
-                  Node(5,
-                       None,
-                       Node(7)))
-             )
+    b = Node(1, Node(2), Node(3, Node(4, Node(6), None), Node(5, None, Node(7))))
     ret = []
     pre_o(b, ret=ret)
     print(ret)

@@ -1,5 +1,3 @@
-""" Quicksort using DNF, good w/ duplicates """
-
 import random
 import heapq
 
@@ -25,36 +23,36 @@ def test():
         arr2 = sorted(arr)
         arr = sort_f(arr)
         assert tuple(arr) == tuple(arr2)
-        print('ok')
+        print("ok")
 
         arr2 = sorted(arr, reverse=True)
         arr = sort_f(arr, reverse=True)
         assert tuple(arr) == tuple(arr2)
-        print('ok')
+        print("ok")
 
         # floats
         arr = [random.random() for i in range(l)]
         arr2 = sorted(arr)
         arr = sort_f(arr)
         assert tuple(arr) == tuple(arr2)
-        print('ok')
+        print("ok")
 
         arr2 = sorted(arr, reverse=True)
         arr = sort_f(arr, reverse=True)
         assert tuple(arr) == tuple(arr2)
-        print('ok')
+        print("ok")
 
     # dups
     arr = [0, 1, 0, 1, 1, 2]
     arr2 = sorted(arr)
     arr = sort_f(arr)
     assert tuple(arr) == tuple(arr2)
-    print('ok')
+    print("ok")
 
     arr2 = sorted(arr, reverse=True)
     arr = sort_f(arr, reverse=True)
     assert tuple(arr) == tuple(arr2)
-    print('ok')
+    print("ok")
 
 
 test()
